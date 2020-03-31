@@ -8,7 +8,7 @@ public final class Main
 {
     static private final Segmentation segmentation = new Segmentation();
 	static private final CollectContext collectContext = new CollectContext();
-	static private Omograph omograph =  new Omograph();
+	static private Homograph homograph =  new Homograph();
 
     static public void main(String[] args) throws Exception
     {
@@ -24,7 +24,7 @@ public final class Main
 		onFile(f); else
 		onDir(f);
 	}
-		omograph.view(); //Выводим на экран
+		homograph.view(); //Выводим на экран
     }
 
     static private void onDir(File f) throws IOException
@@ -55,7 +55,7 @@ public final class Main
 	    r.close();
 	}
 	Token[][] tokens = segmentation.segment(lines.toArray(new String[lines.size()]));
-	omograph = collectContext.collect(tokens); //Собираем контекст
+	homograph = collectContext.collect(tokens); //Собираем контекст
 	for(int i = 0; i < tokens.length; i++)
 	{
 	    final Token[] t = tokens[i];

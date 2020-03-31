@@ -2,9 +2,10 @@ package ling;
 
 import java.util.HashMap;
 
-public class Omograph {
-    HashMap<String, ContextInfo> contextLeft = new HashMap();
-    HashMap<String, ContextInfo> contextRight = new HashMap();
+class Homograph {
+    final HashMap<String, ContextInfo> contextLeft = new HashMap();
+    final HashMap<String, ContextInfo> contextRight = new HashMap();
+    
     void view()
     {
         System.out.println("LEFT:");
