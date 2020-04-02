@@ -18,10 +18,13 @@ public class CollectContext {
 	    final Token[] reversed = reversedList.toArray(new Token[reversedList.size()]);
 	    for(int j = 0;j < sent.length;j++)
                 if (sent[j].text.toUpperCase().equals("СТОИТ"))  {
+		    /*
 			homograph.contextRight.save(sent, j, 3);
 			homograph.contextLeft.save(reversed, sent.length - 1 - i, 3);
+		    */
 		    }
 		            return homograph;
 		}
-		}
+		return homograph;
+    }
 }
